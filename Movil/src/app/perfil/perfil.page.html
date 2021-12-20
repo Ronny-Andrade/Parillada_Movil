@@ -1,0 +1,43 @@
+<app-header-atras titulo='Mi informacion'></app-header-atras>
+
+<ion-content>
+  <form action="">
+    <ion-list>
+      <ion-item lines='full'>
+        <ion-label position="floating">Nombres</ion-label>
+        <ion-input type="text" [(ngModel)]="usuario.name" name="name"></ion-input>
+      </ion-item>
+
+      <ion-item lines='full'>
+        <ion-label position="floating">Apellidos</ion-label>
+        <ion-input type="text" [(ngModel)]="usuario.lastname" name="lastname"></ion-input>
+      </ion-item>
+
+      <ion-item lines='full'>
+        <ion-label position="floating">Fecha de nacimiento</ion-label>
+        <ion-input type="text" [(ngModel)]="usuario.fechanac" name="fechanac" disabled=""></ion-input>
+      </ion-item>
+
+      <ion-item lines='full'>
+        <ion-label position="floating">Cedula</ion-label>
+        <ion-input type="text" [(ngModel)]="usuario.ide_card" name="cedula"></ion-input>
+      </ion-item>
+    
+      <ion-item lines='full'>
+        <ion-label position="floating">Numero de celular</ion-label>
+        <ion-input type="text" [(ngModel)]="usuario.cell_phone" name="celular" max="10" pattern="^[0-9-+]{9,10}$"></ion-input>
+      </ion-item>
+    
+      <ion-item lines='full'>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text" [(ngModel)]="usuario.email" name="email" disabled="true" ></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-button type="submit" expand="block" (click)="actualizar()" >Actualizar</ion-button>
+
+  </form>
+  <ion-button type="submit" expand="block" (click)="logout()" >Cerrar sesión</ion-button>
+
+</ion-content>
